@@ -13,10 +13,10 @@
         </header>
         <main>
             <article class="">
-                <img src="wp-content/themes/product_theme/img/soon.jpg" alt="soon">
                 <?php
                 foreach ($posts as $post) :
                     setup_postdata( $post );
+                    the_post_thumbnail('<img/>');
                     the_title('<h1>','</h1>');
                     the_content('<p>','</p>');
                 ?>
