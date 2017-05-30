@@ -11,8 +11,16 @@
 
     </header>
     <main>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>1/6/2017</p>
+        <article class="">
+            <?php
+            foreach ($posts as $post) :
+                setup_postdata( $post );
+                the_title('<h1>','</h1>');
+                the_content('<p>','</p>');
+             ?>
+                <p><?php echo get_post_meta($post->ID, 'date', true); ?></p>
+             <?php endforeach;?>
+         </article>
     </main>
 
   </body>
