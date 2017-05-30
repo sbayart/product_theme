@@ -1,4 +1,14 @@
+/*
+Theme Name: Product
+Author: Salwa
+Description: Theme Sundays.
+Version: 1.0
+*/
 body {
-  background-color: pink; }
+  background-color: pink;
+  width: 60%;
+  margin: 20% auto; }
+  body p:nth-child(2) {
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
