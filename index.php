@@ -27,10 +27,10 @@
              <input type="mail" name="email" value="" placeholder="Email">
              <?php
                      $wpdb->insert(
-                         'form',  array(   'first_name' => $_GET['first_name']),
-                         'form',  array(   'last_name' => $_GET['last_name']),
-                         'form',  array(   'email' => $_GET['email'])
-                                     );
+                         'form',  array(    'first_name' => $_GET['first_name'],
+                                            'last_name' => $_GET['last_name'],
+                                            'email' => $_GET['email']
+                                     ));
                   ?>
                  <button type="submit" name="button">Recevoir la newsletter</button>
          </form>
