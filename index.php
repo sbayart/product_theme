@@ -21,6 +21,19 @@
                 <p><?php echo get_post_meta($post->ID, 'date', true); ?></p>
              <?php endforeach;?>
          </article>
+         <form method="get">
+             <input type="text" name="first_name" value="" placeholder="First Name">
+             <input type="text" name="last_name" value="" placeholder="Last Name">
+             <input type="mail" name="email" value="" placeholder="Email">
+             <?php
+                     $wpdb->insert(
+                         'form',  array(   'first_name' => $_GET['first_name']),
+                         'form',  array(   'last_name' => $_GET['last_name']),
+                         'form',  array(   'email' => $_GET['email'])
+                                     );
+                  ?>
+                 <button type="submit" name="button">Recevoir la newsletter</button>
+         </form>
     </main>
 
   </body>
